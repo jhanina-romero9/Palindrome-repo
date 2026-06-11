@@ -30,21 +30,21 @@ test('Should return false for a non-palindrome word', () => {
     expect(palindrome.isPalindrome()).toBe(false);
 });
 
-test('Validate throw error when text is blank', () => {
+test('Should throw error when text is blank', () => {
     const text = " ";
     const palindrome = new Palindrome(text);
 
     expect(() => palindrome.isPalindrome()).toThrow("Text cannot be empty or null");
 });
 
-test('Validate throw error when text contains numbers', () => {
+test('Should throw error when text contains numbers', () => {
     const text = "test1234A";
     const palindrome = new Palindrome(text);
 
     expect(() => palindrome.isPalindrome()).toThrow("Text cannot contains numbers");
 });
 
-test('Validate throw error when text contains special characteres', () => {
+test('Should throw error when text contains special characteres', () => {
     const text = "Hello [world] @test";
     const palindrome = new Palindrome(text);
 

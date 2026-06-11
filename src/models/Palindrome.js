@@ -1,4 +1,4 @@
-const PalindromeError = require("../models/PalindromeError");
+const PalindromeError = require("./PalindromeError");
 
 class Palindrome {
 
