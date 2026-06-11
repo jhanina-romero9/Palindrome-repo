@@ -1,21 +1,21 @@
 const Palindrome = require("../models/Palindrome");
 const PalindromeError = require("../models/PalindromeError");
 
-test('Validate a word is palindrome', () => {
+test('Should return true for a palindrome word', () => {
     const text = "level";
     const palindrome = new Palindrome(text);
 
     expect(palindrome.isPalindrome()).toBe(true);
 });
 
-test('Validate a word is not palindrome', () => {
+test('Should return false for a non-palindrome word', () => {
     const text = "Computer";
     const palindrome = new Palindrome(text);
 
     expect(palindrome.isPalindrome()).toBe(false);
 });
 
-test('Validate a phrase is palindrome', () => {
+test('Should return true for a palindrome phrase', () => {
     const text = "Never odd or even";
     const palindrome = new Palindrome(text);
 
@@ -23,7 +23,7 @@ test('Validate a phrase is palindrome', () => {
 });
 
 
-test('Validate a phrase is not palindrome', () => {
+test('Should return false for a non-palindrome word', () => {
     const text = "Hello world";
     const palindrome = new Palindrome(text);
 

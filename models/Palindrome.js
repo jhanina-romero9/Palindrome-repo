@@ -7,21 +7,14 @@ class Palindrome {
     }
 
     isPalindrome() {
-        this.reviewText(this.text);
-        const cleanText = this.text.toLowerCase().replace(/[\s',!?-]/g, '');
-        const reversed = cleanText.split('').reverse().join('');
+        this.#reviewText(this.text);
+        const cleanText = this.#normalize(this.text);
+        const reversed = this.#reverse(cleanText);
 
-        if (cleanText === reversed) {
-            console.log(this.text + " => It's a palindrome!");
-            return true;
-        } else {
-            console.log(this.text + " => Not a palindrome.");
-            return false;
-        }
-
+        return cleanText === reversed;
     }
 
-    reviewText(text) {
+    #reviewText(text) {
         const specialCharacterRegex = /[@#$%^&*()\+={}[\]:;"<>.\/|\\]/;
         const numberRegex = /\d/;
 
@@ -36,5 +29,17 @@ class Palindrome {
             throw new PalindromeError("Text cannot contains numbers");
         }
     }
+
+
+    #normalize(text) {
+        return text
+            .toLowerCase()
+            .replace(/[\s',!?-]/g, '');
+    }
+
+    #reverse(text) {
+        return [...text].reverse().join('');
+    }
+
 }
 module.exports = Palindrome;
