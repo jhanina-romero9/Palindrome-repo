@@ -11,6 +11,7 @@ class Palindrome {
         const cleanText = this.#normalize(this.text);
         const reversed = this.#reverse(cleanText);
 
+        //main version
         return cleanText === reversed;
     }
 
