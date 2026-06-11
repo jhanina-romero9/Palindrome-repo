@@ -1,0 +1,24 @@
+{
+  "name": "palindrome-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhanina-romero9/Palindrome-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jhanina-romero9/Palindrome-repo/issues"
+  },
+  "homepage": "https://github.com/jhanina-romero9/Palindrome-repo#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
